@@ -38,7 +38,7 @@ class Clientes(models.Model):
 class Articulos(models.Model):
     nombre=models.CharField(max_length=30)
     seccion=models.CharField(max_length=20)
-    precio=models.IntegerField()
+    precio=models.IntegerField(max_length=100)
 
     def __str__(self):
 
