@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>USTED ESTA BUSCANDO: {{ query }}</p>
+    {% if articulos %}
+    <table border="2">
+        <tr>
+            <td>Nombre</td>
+            <td>Seccion</td>
+            <td>Precio</td>
+        </tr>
+        {% for articulo in articulos %}
+        <tr>
+            <td>{{ articulo.nombre }}</td>
+            <td>{{ articulo.seccion }}</td>
+            <td>{{ articulo.precio }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No existe el articulo buscado</p>
+    {% endif %}
+</body>
+</html>
